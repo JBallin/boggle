@@ -26,7 +26,7 @@ let BoxUsedPreviously = [];
 function selectLetter(boxDiv) {
   const boxNum = parseInt(boxDiv.id.slice(3));
   if (isValidMove(boxNum)) {
-    submittedLetters.push(boxDiv.innerHTML);
+    submittedLetters.push(boxDiv.innerText);
     boxDiv.style.backgroundColor = '#C0C0C0';
     // remove onclick on previously selected options?
     // add back all onclicks in the resetSubmission()
