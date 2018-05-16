@@ -1,3 +1,5 @@
+const size = 4;
+
 const board1 = [
   ['R', 'H', 'R', 'E'],
   ['Y', 'P', 'C', 'S'],

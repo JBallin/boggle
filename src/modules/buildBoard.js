@@ -22,4 +22,4 @@ function buildBoard(size, board) {
 
 }
 
-buildBoard(4, initialBoard);
+buildBoard(size, board2);
