@@ -14,47 +14,50 @@
 
 const wordsUsed = [];
 let submittedLetters = [];
-let previousMove = null;
-let BoxUsedPreviously = [];
+let previousMoveBoxNum = null;
+
 
 function selectLetter(boxDiv) {
   const boxNum = parseInt(boxDiv.id.slice(3));
   if (isValidMove(boxNum)) {
     submittedLetters.push(boxDiv.innerText);
     boxDiv.style.backgroundColor = '#C0C0C0';
-    // remove onclick on previously selected options?
-    // add back all onclicks in the resetSubmission()
+    // remove onclick on boxDiv
     displayLetters();
-  } else if (true) {
+    previousMoveBoxNum = boxNum;
+  } else {
     alert('INVALID: Selection must be adjacent/diagonal to previous letter');
     resetSubmission();
   }
 }
 
 function resetSubmission() {
+  // add onclick back to all boxDivs
+  // reset background color of all boxDiv to white
   submittedLetters = [];
   BoxUsedPreviously = [];
-  previousMove = null;
+  previousMoveBoxNum = null;
 }
 
 function boxNumToIndices(size, boxNum) {
   return [Math.ceil(boxNum/size) - 1, (boxNum - 1) % size];
 }
 
-function isValidMove(boxNum) {
-  // let BoxUsedPreviously = BoxUsedPreviously.join('');
-  // first selection - don't test for valid move
-  if (previousMove === null) {
-    // test if previousMove === 0;
-    previousMove = box
-    return true;
-    // REMOVE if removing onclick when letter selected
-  } else if (boxNum === BoxUsedPreviously.includes(boxNum)) {
-    alert('INVALID: You can not use a letter square more than 1 time.');
-    resetSubmission();
-  } else // convert boxNum to indices
-  // test if valid with Math.abs from toy problem
+function isFirstMove(boxNum) {
+  return previousMoveBoxNum === null;
+}
 
+function isAdjacentOrDiagonal(boxNum) {
+  const previousBoxIndices = boxNumToIndices(size, previousMoveBoxNum);
+  const currentBoxIndices = boxNumToIndices(size, boxNum);
+  const rowDelta = Math.abs(previousBoxIndices[0] - currentBoxIndices[0]);
+  const columnDelta = Math.abs(previousBoxIndices[1] - currentBoxIndices[1]);
+
+  return  rowDelta <= 1 && columnDelta <= 1;
+}
+
+function isValidMove(boxNum) {
+  return isFirstMove(boxNum) || isAdjacentOrDiagonal(boxNum);
 }
 
 function submitWord() {
