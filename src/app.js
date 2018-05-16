@@ -20,7 +20,8 @@ let previousMoveBoxNum = null;
 function selectLetter(boxDiv) {
   const boxNum = parseInt(boxDiv.id.slice(3));
   if (isValidMove(boxNum)) {
-    submittedLetters.push(boxDiv.innerText);
+    const letter = boxDiv.querySelector('p').innerHTML;
+    submittedLetters.push(letter);
     boxDiv.style.backgroundColor = '#C0C0C0';
     boxDiv.onclick = null;
     boxDiv.style.cursor = 'default';
@@ -93,5 +94,5 @@ function displayWords(newWord) {
   const wordsUsedDiv = document.querySelector('#wordsUsed');
   const newWordLI = document.createElement('li');
   newWordLI.innerHTML = newWord;
-  wordsUsedDiv.appendChild(newWordLI);
+  wordsUsedDiv.querySelector('ul').appendChild(newWordLI);
 }
