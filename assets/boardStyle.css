@@ -28,3 +28,10 @@
   height: 100px;
   width: 100px;
 }
+
+.letter {
+  color: blue;
+  font: 36px sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
