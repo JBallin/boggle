@@ -1,16 +1,14 @@
-function buildBoardRows(n, board) {
+function buildBoard(size, board) {
   let boxNum = 1;
   const boxesContainer = document.querySelector('#boxesContainer');
 
-  for (let row = 0; row < n; row++) {
-    let newRow = document.createElement('div');
-    boxesContainer.appendChild(newRow);
-    for (let box = 0; box < n; box++) {
+  for (let row = 0; row < size; row++) {
+    for (let box = 0; box < size; box++) {
       let newBox = document.createElement('div');
       newBox.className = 'box';
       newBox.id = 'box' + boxNum.toString();
       boxNum++;
-      newRow.appendChild(newBox);
+      boxesContainer.appendChild(newBox);
 
       let newLetter = document.createElement('p');
       newLetter.className = 'letter';
@@ -18,6 +16,7 @@ function buildBoardRows(n, board) {
       newBox.appendChild(newLetter);
     }
   }
+
 }
 
-buildBoardRows(4, initialBoard);
+buildBoard(4, initialBoard);
