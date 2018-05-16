@@ -43,6 +43,10 @@ function resetSubmission() {
   previousMove = null;
 }
 
+function boxNumToIndices(size, boxNum) {
+  return [Math.ceil(boxNum/size) - 1, (boxNum - 1) % size];
+}
+
 function isValidMove(boxNum) {
   // let BoxUsedPreviously = BoxUsedPreviously.join('');
   // first selection - don't test for valid move
