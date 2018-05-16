@@ -37,3 +37,28 @@
   font: 42px sans-serif;
   font-weight: bold;
 }
+
+#submittedLetters, #buttonDiv, #wordsUsed {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#submittedLetters {
+  margin-top: 20px;
+  font-size: 28px;
+}
+
+#wordsUsed {
+  margin-top: 20px;
+}
+
+#wordsUsed ul {
+  font-size: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+#wordsUsed li {
+  display: inline-block;
+}
