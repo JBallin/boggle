@@ -25,13 +25,13 @@ let BoxUsedPreviously = [];
 
 function selectLetter(boxDiv) {
   const boxNum = parseInt(boxDiv.id.slice(3));
-  if isValidMove(boxNum) {
+  if (isValidMove(boxNum)) {
     submittedLetters.push(boxDiv.innerHTML);
-    boxDiv.style.backgroundColor = #C0C0C0;
+    boxDiv.style.backgroundColor = '#C0C0C0';
     // remove onclick on previously selected options?
     // add back all onclicks in the resetSubmission()
     displayLetters();
-  } else if {
+  } else if (true) {
     alert('INVALID: Selection must be adjacent/diagonal to previous letter');
     resetSubmission();
   }
