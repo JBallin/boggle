@@ -10,6 +10,7 @@ function buildBoard(size, board) {
       newBox.onclick = function() {
         selectLetter(this);
       }
+      newBox.style.cursor = 'pointer';
       boxNum++;
       boxesContainer.appendChild(newBox);
 

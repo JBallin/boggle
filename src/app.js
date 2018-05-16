@@ -22,7 +22,8 @@ function selectLetter(boxDiv) {
   if (isValidMove(boxNum)) {
     submittedLetters.push(boxDiv.innerText);
     boxDiv.style.backgroundColor = '#C0C0C0';
-    // remove onclick on boxDiv
+    boxDiv.onclick = null;
+    boxDiv.style.cursor = 'default';
     displayLetters();
     previousMoveBoxNum = boxNum;
   } else {
@@ -31,11 +32,21 @@ function selectLetter(boxDiv) {
   }
 }
 
+function resetBoard(size, board) {
+  let boxDivs = document.querySelectorAll('.box');
+  boxDivs.forEach((box) => {
+    box.onclick = function() {
+      selectLetter(this);
+    };
+    box.style.backgroundColor = 'white';
+    box.style.cursor = 'pointer';
+  });
+}
+
 function resetSubmission() {
-  // add onclick back to all boxDivs
-  // reset background color of all boxDiv to white
+  resetBoard();
   submittedLetters = [];
-  BoxUsedPreviously = [];
+  displayLetters();
   previousMoveBoxNum = null;
 }
 
