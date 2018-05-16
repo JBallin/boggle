@@ -1,18 +1,10 @@
-let boardContainer;
-
-function createBoardContainer() {
-  boardContainer = document.createElement('div');
-  boardContainer.className = 'container';
-  document.body.appendChild(boardContainer);
-}
-
 function buildBoardRows(n, board) {
   let boxNum = 1;
+  const boxesContainer = document.querySelector('#boxesContainer');
 
   for (let row = 0; row < n; row++) {
     let newRow = document.createElement('div');
-    newRow.className = 'row';
-    boardContainer.appendChild(newRow);
+    boxesContainer.appendChild(newRow);
     for (let box = 0; box < n; box++) {
       let newBox = document.createElement('div');
       newBox.className = 'box';
@@ -28,5 +20,4 @@ function buildBoardRows(n, board) {
   }
 }
 
-createBoardContainer();
 buildBoardRows(4, initialBoard);

@@ -3,12 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Boggle Game</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/boardStyle.css">
   </head>
   <body>
 
-    <script type="text/javascript" src="./src/modules/seedInitialBoard"></script>
+    <div id="boardTray">
+      <div id="boxesContainer"></div>
+    </div>
+
+    <script type="text/javascript" src="./src/modules/seedInitialBoard.js"></script>
     <script type="text/javascript" src="./src/modules/buildBoard.js"></script>
+
     <div id="submittedLetters"><p></p></div>
     <div id="wordsUsed"><ul></ul></div>
 

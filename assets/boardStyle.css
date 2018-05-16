@@ -1,31 +1,14 @@
-#centerGame {
-  width: 472px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#outerContainer {
-  background-color: blue;
-  border: 15px solid blue;
-  border-radius: 20px;
-  margin-bottom: 40px;
-  height: 470px;
-  width: 460px;
-}
-
-#innerPadding {
-  display: grid;
-  grid-template-rows: 200px;
-  grid-template-columns: 120px auto 120px;
+#boardTray {
   background-color: #C0C0C0;
-  border: 8px solid #C0C0C0;
-  border-radius: 15px;
+  padding: 8px;
+  border: 15px solid blue;
+  border-radius: 35px;
   height: 454px;
   width: 443px;
-
+  margin: auto;
 }
 
-.container-game {
+#boxesContainer {
   justify-content: center;
   display: grid;
   grid-gap: 10px;
@@ -44,12 +27,4 @@
   background: white;
   height: 100px;
   width: 100px;
-}
-
-body {
-  background: lightblue;
-}
-
-button {
-  float: right;
 }
