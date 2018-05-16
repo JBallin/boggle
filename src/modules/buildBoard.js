@@ -7,6 +7,9 @@ function buildBoard(size, board) {
       let newBox = document.createElement('div');
       newBox.className = 'box';
       newBox.id = 'box' + boxNum.toString();
+      newBox.onclick = function() {
+        selectLetter(this);
+      }
       boxNum++;
       boxesContainer.appendChild(newBox);
 
