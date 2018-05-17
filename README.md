@@ -26,11 +26,13 @@ Click on letters to form a word and click “submit” when done.
 
 *Note: ‘Qu’ counts as 2 letters.*
 
-—
+---
 
 Built by @JBallin and @CorriMori for their Q1 Project at Galvanize’s Web Development Bootcamp.
 
-This project uses HTML, CSS, JavaScript, Git & GitHub, the [Oxford Dictionaries API](https://developer.oxforddictionaries.com), Local Storage, Bootstrap, and Mocha/Chai tests.
+This project uses HTML, CSS, Bootstrap, JavaScript, Git, and GitHub.
+
+---
 
 <h3 align="center">Screenshots</h3>
 
