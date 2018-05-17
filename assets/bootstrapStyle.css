@@ -9,14 +9,22 @@ p {
   font-size: 16px;
 }
 
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
 .bg-1 {
     background-color: #1abc9c; /* Green */
     color: #ffffff;
+    padding-bottom: 35px;
 }
 
 .bg-2 {
     background-color: #474e5d; /* Dark Blue */
     color: #ffffff;
+    min-height: 120px;
+    padding: 20px;
 }
 
 .bg-3 {
@@ -24,11 +32,6 @@ p {
     color: #ffffff;
     height: 75px;
     padding: 25px;
-}
-
-.container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
 }
 
 .navbar {
