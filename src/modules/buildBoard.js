@@ -23,4 +23,4 @@ function buildBoard(size, board) {
 
 }
 
-buildBoard(size, board2);
+buildBoard(size, selectedBoard);
