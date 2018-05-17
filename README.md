@@ -4,7 +4,7 @@
 
 **Objective**
 
-Make as many words as you can before the 3 minute timer runs out. Can you beat your high score?
+Make as many words as you can!
 
 **Rules**
 
@@ -13,11 +13,18 @@ Subsequent letters must be touching adjacently or diagonally and can’t be re-u
 **Instructions**
 
 Click on letters to form a word and click “submit” when done.
-Refresh the page to begin a new game.
 
 **Scoring**
 
-1 point per letter (‘Qu’ counts as 2).
+| Word length   | Points        |
+| ------------- |:-------------:|
+| 3, 4          | 1             |
+| 5             | 2             |
+| 6             | 3             |
+| 7             | 5             |
+| 8+            | 11            |
+
+*Note: ‘Qu’ counts as 2 letters.*
 
 —
 
