@@ -1,17 +1,3 @@
-// - On click, Verify adjacent/diagonal move (create separate verifyMove function). If not, reset submission. If yes push letter (element.innerHTML) as an integer to “submission”
-// - highlight box background color/border of selected words
-// - Display submission progress
-// - Verify word not in usedWords -> error or add to usedWords and update display of usedWords. make sure readme explains no duplicates
-// - FIRST LETTER onclick, how does it know its first letter? because submissionIndexes is empty? push letter from to submissionLetters
-// - SECOND LETTER box.onclick, check if validMove (which calls the convertId...) ? submissionIDs.push(this.id) submissionLetters.push(querySelector(#id (how get ID?) > p).innerHTML) : alert(invalid error - with reason why (3+ or adj/diag)?) + resetSubmissionArray(s)AndBoxHighlighting (write resetSubmissionArray(s)... function? needed somewhere else? yes! for submit button)
-// - check if duplicate not in usedWords array? submit button needs to concat the letters array and push to usedWords array..how do that again? resetSubmissionArrays() : error(duplicate) resetSubmissionArrays()
-// - display usedWords
-// - box onclick remove selectLetter function, so you can't click a previously clicked box
-//    - resetSubmission should reset onclicks
-// - create wordsUsed HTML
-
-//==================================================
-
 const wordsUsed = [];
 let submittedLetters = [];
 let previousMoveBoxNum = null;
@@ -20,17 +6,25 @@ let previousMoveBoxNum = null;
 function selectLetter(boxDiv) {
   const boxNum = parseInt(boxDiv.id.slice(3));
   if (isValidMove(boxNum)) {
-    const letter = boxDiv.querySelector('p').innerHTML;
-    submittedLetters.push(letter);
-    boxDiv.style.backgroundColor = '#C0C0C0';
-    boxDiv.onclick = null;
-    boxDiv.style.cursor = 'default';
+    submitLetter(boxDiv);
+    disableBox(boxDiv);
     displayLetters();
     previousMoveBoxNum = boxNum;
   } else {
     alert('INVALID: Selection must be adjacent/diagonal to previous letter');
     resetSubmission();
   }
+}
+
+function submitLetter(boxDiv) {
+  const letter = boxDiv.querySelector('p').innerHTML;
+  submittedLetters.push(letter);
+}
+
+function disableBox(boxDiv) {
+  boxDiv.style.backgroundColor = '#C0C0C0';
+  boxDiv.onclick = null;
+  boxDiv.style.cursor = 'default';
 }
 
 function resetBoard(size, board) {
