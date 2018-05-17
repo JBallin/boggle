@@ -3,8 +3,8 @@
   padding: 8px;
   border: 15px solid blue;
   border-radius: 35px;
-  height: 454px;
-  width: 443px;
+  height: 497px;
+  width: 485px;
   margin: auto;
 }
 
@@ -17,12 +17,12 @@
   border: 3px solid blue;
   border-radius: 15px;
   background: blue;
-  height: 448px;
+  height: 451px;
   width: 438px;
 }
 
 .box {
-  border: 1px solid grey;
+  border: 2px solid grey;
   border-radius: 10px;
   background: white;
   height: 100px;
@@ -36,6 +36,7 @@
   color: blue;
   font: 42px sans-serif;
   font-weight: bold;
+  margin: 0;
 }
 
 #submittedLetters, #buttonDiv, #wordsUsed {
