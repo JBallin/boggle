@@ -23,4 +23,4 @@ function buildBoard(size, board) {
 
 }
 
-buildBoard(size, selectedBoard);
+buildBoard(size, randomBoard);
