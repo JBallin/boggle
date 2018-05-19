@@ -1,5 +1,6 @@
-function buildBoard(size, board) {
-  let boxNum = 1;
+function buildBoard() {
+  let randomBoard = getRandomBoard();
+  let boxNum = 0;
   const boxesContainer = document.querySelector('#boxesContainer');
 
   for (let row = 0; row < size; row++) {
@@ -16,11 +17,9 @@ function buildBoard(size, board) {
 
       let newLetter = document.createElement('p');
       newLetter.className = 'letter';
-      newLetter.innerHTML = board[row][box];
+      newLetter.innerHTML = randomBoard[row][box];
       newBox.appendChild(newLetter);
     }
   }
 
 }
-
-buildBoard(size, randomBoard);

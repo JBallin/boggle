@@ -9,8 +9,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/bootstrapStyle.css">
     <link rel="stylesheet" href="assets/boardStyle.css">
+    <script type="text/javascript" src="./src/modules/randomBoard.js"></script>
+    <script type="text/javascript" src="./src/modules/buildBoard.js"></script>
+    <script type="text/javascript" src="./src/app.js"></script>
   </head>
   <body>
+
     <header>
       <nav class="navbar navbar-default">
         <div class="container">
@@ -32,14 +36,13 @@
       </nav>
     </header>
 
-    <!-- APP -->
     <div class="container-fluid bg-1 text-center">
       <div id="boardTray">
         <div id="boxesContainer"></div>
       </div>
       <div id="submittedLetters"><p></p></div>
-      <div id="buttonDiv">
-        <button class="btn btn-primary" onclick="submitWord()">Submit Word</button>
+      <div id="submitWord">
+        <button class="btn btn-primary">Submit Word</button>
       </div>
     </div>
 
@@ -50,10 +53,6 @@
     <footer class="bg-3 text-center">
       <p>Check out this project on <a href="https://www.github.com/JBallin/boggle">GitHub</a></p>
     </footer>
-
-    <script type="text/javascript" src="./src/modules/randomBoard.js"></script>
-    <script type="text/javascript" src="./src/modules/buildBoard.js"></script>
-    <script type="text/javascript" src="./src/app.js"></script>
 
   </body>
 </html>

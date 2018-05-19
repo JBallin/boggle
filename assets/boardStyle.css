@@ -39,7 +39,7 @@
   margin: 0;
 }
 
-#submittedLetters, #buttonDiv, #wordsUsed {
+#submittedLetters, #submitWord, #wordsUsed {
   display: flex;
   justify-content: center;
   align-content: center;
