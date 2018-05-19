@@ -14,7 +14,7 @@ Subsequent letters must be touching adjacently or diagonally and can’t be re-u
 
 **Instructions**
 
-Click on letters to form a word and click “submit” when done.
+Click on letters to form a word and click “Submit Word” when done.
 
 **Scoring**
 
@@ -30,7 +30,7 @@ Click on letters to form a word and click “submit” when done.
 
 ---
 
-Built by @JBallin and @CorriMori for their Q1 Project at Galvanize’s Web Development Bootcamp.
+Built by @JBallin and @CorriMori for their Q1 Project at Galvanize’s Web Development Immersive.
 
 This project uses HTML, CSS, Bootstrap, JavaScript, Git, and GitHub.
 
