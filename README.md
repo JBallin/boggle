@@ -2,7 +2,11 @@
 
 <div align="center" style="margin-bottom: 25px"><img width='225px' alt="original boggle board game" src="assets/images/Boggle-Box.jpg"/></div>
 
-<p align="center"><a href="https://jballin.github.io/boggle/">Click here to play!</a></p>
+<p align="center">
+  <a href="https://jballin.github.io/boggle/">Play Game</a>
+  <br>
+  <a href="https://youtu.be/nQ0Gp8IkD9s">Watch Demo</a>
+</p>
 
 **Objective**
 
